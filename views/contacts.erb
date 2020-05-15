@@ -1,0 +1,15 @@
+<h1>Barber Shop</h1>
+<p>Оставьте свои данные для связи с вами</p>
+
+<form action="/contacts" method="POST" role="form">
+        <div class="form-group">
+            <label>Email address</label>
+            <input name="email" type="email" class="form-control" placeholder="name@example.com" value="<%= @email %>">
+        
+        <div class="form-group">
+            <label>Text</label>
+            <input name="text" type="text" class="form-control" placeholder="text" value="<%= @text %>">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Отправить</button>
+</form>    

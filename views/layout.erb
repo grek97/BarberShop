@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Barber Shop</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	    <!-- jQuery (необходим для плагинов JavaScript Bootstrap) -->
+	    <script src="/vendor/jquery-1.9.1.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+			<%# Включите все скомпилированные Плагины (ниже) или включите отдельные файлы по мере необходимости %>
+	    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="jquery.simplecolorpicker.js"></script>
+
+		<link rel="stylesheet" href="jquery.simplecolorpicker.css">
+
+		<script src="jquery.datetimepicker.full.js"></script>  <!-- Jquery Java Script datetimepicker -->
+
+	<link rel="stylesheet" href="jquery.datetimepicker.css">  	<%# jquery CSS datetimepicker %>
+
+		<%# jQuery — набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML.
+		 		Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и 
+			 содержимому элементов DOM, манипулировать ими.  %>
+	</head>
+	<body>
+		<div class="container">
+
+			<!-- Static navbar -->
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" href="/">Barber Shop</a>
+			  </div>
+			  <div class="navbar-collapse collapse">
+			    <ul class="nav navbar-nav">
+			      <li><a href="/about">О нас</a></a></li>
+			      <li><a href="/visit">Записаться</a></li>
+			      <li><a href="/contacts">Контакты</a></li>
+			 	  <li><a href="/showusers">Список записавшихся</a></li>
+				</ul>
+			  </div><!--/.nav-collapse -->
+			</nav>
+
+			<div>
+			      <%if @error && @error.length > 0 then %>
+			          <div class="alert alert-danger"><%=@error%></div>
+			      <% end %>
+			      <%= yield %>
+			</div>
+
+	</div>
+  </body>
+</html>
